@@ -1,0 +1,87 @@
+:root {
+  --body-spacing: 2rem;
+  --spacing-ratio: 1.5;
+  --header-spacing: 20px;
+
+  --font-family: "Space Grotest";
+  --bold: 500;
+  --normal: 400;
+
+  --font-ratio: 1.25;
+  --base-font-size: 16px * pow(var(--font-ratio), 1);
+  --line-height: 4;
+  --letter-spacing-ratio: 0;
+}
+
+$typography: (
+  h1: (
+    font-family: var(--font-family),
+    font-weight: var(--bold),
+    font-size: (
+      min: calc(var(--base-font-size) * pow(var(--font-ratio), 4)),
+      fluid: calc(var(--base-font-size) * pow(var(--font-ratio), 3.5)),
+      max: calc(var(--base-font-size) * pow(var(--font-ratio), 5)),
+    ),
+    letter-spacing: calc(
+        var(--base-font-size) * pow(var(--letter-spacing-ratio), 1)
+      ),
+    line-height: calc(1 + (4 - pow(var(--font-ratio), -1)) / var(--line-height)),
+    font-style: normal,
+  ),
+  h2: (
+    font-family: var(--font-family),
+    font-weight: var(--bold),
+    font-size: (
+      min: calc(var(--base-font-size) * pow(var(--font-ratio), 3)),
+      fluid: calc(var(--base-font-size) * pow(var(--font-ratio), 2.5)),
+      max: calc(var(--base-font-size) * pow(var(--font-ratio), 4)),
+    ),
+    letter-spacing: calc(
+        var(--base-font-size) * pow(var(--letter-spacing-ratio), 0.8)
+      ),
+    line-height: calc(1 + (3 - pow(var(--font-ratio), -1)) / var(--line-height)),
+    font-style: normal,
+  ),
+  h3: (
+    font-family: var(--font-family),
+    font-weight: var(--bold),
+    font-size: (
+      min: calc(var(--base-font-size) * pow(var(--font-ratio), 2)),
+      fluid: calc(var(--base-font-size) * pow(var(--font-ratio), 2)),
+      max: calc(var(--base-font-size) * pow(var(--font-ratio), 3)),
+    ),
+    letter-spacing: calc(
+        var(--base-font-size) * pow(var(--letter-spacing-ratio), 0.6)
+      ),
+    line-height: calc(1 + (2 - pow(var(--font-ratio), -1)) / var(--line-height)),
+    font-style: normal,
+  ),
+  h4: (
+    font-family: var(--font-family),
+    font-weight: var(--bold),
+    font-size: (
+      min: calc(var(--base-font-size) * pow(var(--font-ratio), 1)),
+      fluid: calc(var(--base-font-size) * pow(var(--font-ratio), 1.5)),
+      max: calc(var(--base-font-size) * pow(var(--font-ratio), 2)),
+    ),
+    letter-spacing: calc(
+        var(--base-font-size) * pow(var(--letter-spacing-ratio), 0.4)
+      ),
+    line-height: calc(1 + (1 - pow(var(--font-ratio), -1)) / var(--line-height)),
+    font-style: normal,
+  ),
+  p: (
+    font-family: var(--font-family),
+    font-weight: 400,
+    font-size: (
+      min: calc(var(--base-font-size) * 1),
+      fluid: calc(var(--base-font-size) * pow(var(--font-ratio), 0.5)),
+      max: calc(var(--base-font-size) * pow(var(--font-ratio), 1.5)),
+    ),
+    letter-spacing: calc(
+        var(--base-font-size) * pow(var(--letter-spacing-ratio), 0.2)
+      ),
+    line-height: calc(1 + (0 - pow(var(--font-ratio), -1)) / var(--line-height)),
+    font-style: normal,
+  ),
+);

@@ -1,0 +1,36 @@
+@mixin flex-box(
+  $display: flex,
+  $direction: null,
+  $wrap: null,
+  $justify: null,
+  $align: null,
+  $gap: null
+) {
+  display: $display;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin typography($type) {
+  $style: map-get($typography, $type);
+
+  font-family: map-get($style, font-family);
+  font-weight: map-get($style, font-weight);
+
+  // Retrieve font size values
+  $font-size: map-get($style, font-size);
+  font-size: clamp(
+    map-get($font-size, min),
+    // Minimum value
+    map-get($font-size, fluid),
+    // Fluid scaling (vw-based)
+    map-get($font-size, max) // Maximum value
+  );
+
+  letter-spacing: map-get($style, letter-spacing);
+  line-height: map-get($style, line-height);
+  font-style: map-get($style, font-style);
+}

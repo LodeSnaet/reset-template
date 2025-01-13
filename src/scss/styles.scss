@@ -1,6 +1,7 @@
-//@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
-
+@import "generics";
+@import "variables";
+@import "mixins";
 @import "settings";
 @import "reset";
-@import "generics";

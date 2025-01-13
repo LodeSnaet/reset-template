@@ -1,5 +1,70 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include flex-box(flex, column, null, null, null, var(--body-spacing));
+  @include typography(p);
+}
+
+header {
+  @include flex-box(
+    flex,
+    column,
+    null,
+    null,
+    null,
+    calc(var(--body-spacing) - var(--header-spacing))
+  );
+}
+
+main {
+  @include flex-box(
+    flex,
+    column,
+    null,
+    null,
+    null,
+    calc(var(--body-spacing) / var(--spacing-ratio))
+  );
+}
+
+section {
+  @include flex-box(
+    flex,
+    column,
+    null,
+    null,
+    null,
+    calc((var(--body-spacing) / var(--spacing-ratio) / var(--spacing-ratio)))
+  );
+}
+
+h1 {
+  @include typography(h1);
+  margin: 0;
+}
+
+h2 {
+  @include typography(h2);
+  margin: 0;
+}
+h3 {
+  @include typography(h3);
+  margin: 0;
+}
+h4 {
+  @include typography(h4);
+  margin: 0;
+}
+
+a {
+  @include typography(p);
+
+  text-decoration: none;
+  color: inherit;
 }
