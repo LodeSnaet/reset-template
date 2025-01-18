@@ -1,13 +1,14 @@
 :root {
+  --ratio: 1.3333;
   --body-spacing: 2rem;
-  --spacing-ratio: 1.5;
+  --spacing-ratio: var(--ratio);
   --header-spacing: 20px;
 
   --font-family: "Space Grotest";
   --bold: 500;
   --normal: 400;
 
-  --font-ratio: 1.25;
+  --font-ratio: var(--ratio);
   --base-font-size: 16px;
   --line-height: 4;
   --letter-spacing-ratio: 0;

@@ -68,3 +68,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+ul {
+  @include flex-box(
+    flex,
+    column,
+    null,
+    null,
+    null,
+    calc(
+      (
+        var(--body-spacing) / var(--spacing-ratio) / var(--spacing-ratio) /
+          var(--spacing-ratio) / var(--spacing-ratio)
+      )
+    )
+  );
+}
