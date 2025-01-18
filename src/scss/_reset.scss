@@ -18,7 +18,10 @@ header {
     null,
     null,
     null,
-    calc(var(--body-spacing) - var(--header-spacing))
+    calc(
+      var(--body-spacing) / var(--spacing-ratio) / var(--spacing-ratio) /
+        var(--spacing-ratio)
+    )
   );
 }
 
@@ -70,6 +73,16 @@ a {
 }
 
 ul {
+  @if $list-style-boolean == false {
+    --list-style: none;
+    padding: 0;
+  } @else {
+    --list-style: disc;
+  }
+
+  list-style: var(--list-style);
+  margin: 0;
+
   @include flex-box(
     flex,
     column,

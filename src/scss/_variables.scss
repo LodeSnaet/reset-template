@@ -1,19 +1,20 @@
 :root {
   --ratio: 1.3333;
-  --body-spacing: 2rem;
   --spacing-ratio: var(--ratio);
-  --header-spacing: 20px;
+  --font-ratio: var(--ratio);
+
+  --body-spacing: 2rem;
 
   --font-family: "Space Grotest";
   --bold: 500;
   --normal: 400;
 
-  --font-ratio: var(--ratio);
   --base-font-size: 16px;
   --line-height: 4;
   --letter-spacing-ratio: 0;
 }
 
+$list-style-boolean: false;
 $typography: (
   h1: (
     font-family: var(--font-family),
